@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比特币价格预测器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>比特币100万美元倒计时</h1>
+        
+
+        <div class="prediction-section">
+            <h2>2033年预测价格计时器</h2>
+            <div class="target-price-showcase">
+                <div class="target-label">2033年目标价格</div>
+                <div class="target-price">$1,000,000</div>
+                <div class="target-date">2033年12月31日</div>
+            </div>
+            
+            <div class="prediction-info">
+                <p>基于模拟增长的每秒价格预测：</p>
+            </div>
+            <div id="predicted-price" class="price-display prediction">
+                <span class="loading">计算中...</span>
+            </div>
+            <div id="time-remaining" class="time-info"></div>
+            <div id="growth-rate" class="growth-info"></div>
+        </div>
+
+        <div class="chart-section">
+            <h2>价格预测K线图</h2>
+            <div class="chart-container">
+                <canvas id="priceChart" width="800" height="400"></canvas>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-color historical"></span>
+                        <span>历史高点</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color prediction"></span>
+                        <span>预测轨迹</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color target"></span>
+                        <span>目标价格</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-label">距离目标还需：</span>
+                <span id="days-remaining" class="stat-value">-</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">每秒增长：</span>
+                <span id="per-second-growth" class="stat-value">-</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
