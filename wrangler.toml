@@ -1,0 +1,22 @@
+[env.production]
+name = "btc-price-tracker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[env.production.kv_namespaces]]
+binding = "BTC_KV"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+[env.production.triggers]
+crons = ["0 * * * *"]  # 每小时执行一次
+
+[env.development]
+name = "btc-price-tracker-dev"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[env.development.kv_namespaces]]
+binding = "BTC_KV"
+id = "your-dev-kv-namespace-id"
+preview_id = "your-dev-preview-kv-namespace-id"

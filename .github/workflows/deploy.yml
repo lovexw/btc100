@@ -1,0 +1,35 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install -g wrangler
+        
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          environment: 'production'
+          
+      - name: Notify deployment success
+        if: success()
+        run: |
+          echo "🎉 部署成功！"
+          echo "✅ 比特币价格追踪器已更新"
+          echo "🌐 全球用户现在可以访问最新版本"

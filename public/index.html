@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比特币价格追踪器</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-bitcoin"></i> 比特币价格追踪器</h1>
+            <p class="subtitle">专为中国大陆网络环境优化</p>
+        </header>
+
+        <div class="price-card">
+            <div class="price-header">
+                <h2>当前价格</h2>
+                <button id="refreshBtn" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i> 刷新
+                </button>
+            </div>
+            
+            <div class="price-display">
+                <div class="price-main">
+                    <span class="currency">$</span>
+                    <span id="currentPrice">加载中...</span>
+                </div>
+                <div class="price-cny">
+                    ≈ ¥<span id="currentPriceCNY">-</span>
+                </div>
+            </div>
+            
+            <div class="price-info">
+                <div class="info-item">
+                    <span class="label">数据源:</span>
+                    <span id="dataSource">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">更新时间:</span>
+                    <span id="updateTime">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h3>价格趋势 (最近24小时)</h3>
+            <div class="chart-container">
+                <canvas id="priceChart" width="800" height="300"></canvas>
+            </div>
+        </div>
+
+        <div class="status-card">
+            <h3>服务状态</h3>
+            <div class="status-info">
+                <div class="status-item">
+                    <i class="fas fa-clock"></i>
+                    <span>自动更新: 每小时一次</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-database"></i>
+                    <span>数据存储: 本地KV存储</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-globe-asia"></i>
+                    <span>网络优化: 适配中国大陆</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
