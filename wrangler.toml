@@ -1,0 +1,20 @@
+# This file is not required but useful for advanced Cloudflare Pages deployment
+# For basic deployment, use Cloudflare Dashboard UI
+
+name = "bitcoin-1m"
+type = "javascript"
+workers_dev = true
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.{js,jsx,ts,tsx}"]
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+name = "bitcoin-1m-prod"
+
+[[env.production.routes]]
+pattern = "bitcoin-1m.example.com/*"
