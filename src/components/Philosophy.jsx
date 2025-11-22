@@ -38,10 +38,10 @@ export default function Philosophy() {
     <section id="philosophy" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900">
             <span className="gradient-text">投资理念</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             成为百万美元信徒需要的不仅是资金，更是正确的心态。
             这些原则指引着每一位真正的长期投资者。
           </p>
@@ -53,15 +53,15 @@ export default function Philosophy() {
             return (
               <div
                 key={index}
-                className="glass-effect rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300 group cursor-pointer"
+                className="glass-effect rounded-xl p-8 hover:border-orange-300 transition-all duration-200 group cursor-pointer"
               >
-                <div className="inline-block p-3 bg-blue-500/20 rounded-lg mb-4 group-hover:bg-blue-500/30 transition-colors">
-                  <Icon className="w-6 h-6 text-blue-400" />
+                <div className="inline-block p-3 bg-orange-100 rounded-lg mb-4 group-hover:bg-orange-200 transition-colors">
+                  <Icon className="w-6 h-6 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-orange-600 transition-colors">
                   {principle.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-sm">
+                <p className="text-gray-600 leading-relaxed text-sm">
                   {principle.description}
                 </p>
               </div>
@@ -70,11 +70,11 @@ export default function Philosophy() {
         </div>
 
         {/* Key Insight */}
-        <div className="mt-16 glass-effect rounded-2xl p-12 border-l-4 border-blue-500">
-          <blockquote className="text-2xl font-light text-gray-100 italic mb-4">
+        <div className="mt-16 glass-effect rounded-2xl p-12 border-l-4 border-orange-500">
+          <blockquote className="text-2xl font-light text-gray-800 italic mb-4">
             "你不必追问浪潮何时涌上沙滩，所有值得期待的潮汐，都在等星辰归位的时刻，等每一朵涟漪在黎明前与晨光的同频。当时间的齿轮咬合一瞬，它们自会以排山倒海之势，掠过每双望向远方的眼睛，请记住那不是突如其来的喧嚣，而是所有等待在时光深处共振的回响。"
           </blockquote>
-          <p className="text-gray-400">— 写给所有长期持有者</p>
+          <p className="text-gray-600">— 写给所有长期持有者</p>
         </div>
       </div>
     </section>

@@ -28,10 +28,10 @@ export default function Features() {
     <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900">
             <span className="gradient-text">功能特性</span>
           </h2>
-          <p className="text-gray-400 text-lg">这个工具为长期投资者而设计</p>
+          <p className="text-gray-600 text-lg">这个工具为长期投资者而设计</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -40,15 +40,15 @@ export default function Features() {
             return (
               <div key={index} className="glass-effect rounded-xl p-8 flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="p-3 bg-blue-500/20 rounded-lg">
-                    <Icon className="w-6 h-6 text-blue-400" />
+                  <div className="p-3 bg-orange-100 rounded-lg">
+                    <Icon className="w-6 h-6 text-orange-600" />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">
+                  <h3 className="text-lg font-semibold mb-2 text-gray-900">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-600 text-sm">
                     {feature.description}
                   </p>
                 </div>
@@ -66,8 +66,8 @@ export default function Features() {
             { label: '成功概率', value: '📈' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <p className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</p>
-              <p className="text-gray-400 text-sm">{stat.label}</p>
+              <p className="text-3xl font-bold text-orange-500 mb-2">{stat.value}</p>
+              <p className="text-gray-600 text-sm">{stat.label}</p>
             </div>
           ))}
         </div>
