@@ -72,9 +72,7 @@ export default function Philosophy() {
         {/* Key Insight */}
         <div className="mt-16 glass-effect rounded-2xl p-12 border-l-4 border-blue-500">
           <blockquote className="text-2xl font-light text-gray-100 italic mb-4">
-            "不是所有的等待都是浪费，每一份坚持都是在为奇迹创造条件。
-            比特币从1美分到数万美元的路程，已经证明了这一切。
-            而最伟大的故事，往往在最后一章。"
+            "你不必追问浪潮何时涌上沙滩，所有值得期待的潮汐，都在等星辰归位的时刻，等每一朵涟漪在黎明前与晨光的同频。当时间的齿轮咬合一瞬，它们自会以排山倒海之势，掠过每双望向远方的眼睛，请记住那不是突如其来的喧嚣，而是所有等待在时光深处共振的回响。"
           </blockquote>
           <p className="text-gray-400">— 写给所有长期持有者</p>
         </div>
