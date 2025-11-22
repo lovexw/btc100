@@ -15,16 +15,15 @@ export default function BitcoinTracker() {
       setLoading(true)
       setError(null)
       
-      // Using free crypto API
+      // Using AHR999 API
       const response = await fetch(
-        'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&include_market_cap=true'
+        'https://ahr999.btchao.com/api/ahr999/latest'
       )
       
       if (!response.ok) throw new Error('Failed to fetch price')
       
       const data = await response.json()
-      const price = data.bitcoin.usd
-      const change24h = data.bitcoin.usd_24h_change
+      const price = data.currentPrice
       
       setBtcPrice(price)
       setLastUpdate(new Date())
