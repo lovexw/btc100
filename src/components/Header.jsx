@@ -1,0 +1,19 @@
+import { Bitcoin } from 'lucide-react'
+
+export default function Header() {
+  return (
+    <header className="fixed top-0 w-full z-40 backdrop-blur-md bg-slate-950/50 border-b border-blue-500/10">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Bitcoin className="w-8 h-8 text-blue-400" />
+          <span className="text-2xl font-bold gradient-text">Bitcoin $1M</span>
+        </div>
+        <div className="hidden md:flex gap-8">
+          <a href="#tracker" className="text-gray-400 hover:text-blue-400 transition-colors">追踪</a>
+          <a href="#philosophy" className="text-gray-400 hover:text-blue-400 transition-colors">理念</a>
+          <a href="#features" className="text-gray-400 hover:text-blue-400 transition-colors">特性</a>
+        </div>
+      </nav>
+    </header>
+  )
+}
