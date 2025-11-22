@@ -50,6 +50,20 @@ export default function BitcoinTracker() {
   const percentage = btcPrice ? (btcPrice / TARGET_PRICE) * 100 : 0
   const increase = btcPrice ? TARGET_PRICE / btcPrice : 0
 
+  const generateMilestones = () => {
+    const milestones = []
+    for (let i = 1; i <= 20; i++) {
+      const price = i * 50000
+      const label = price >= 1000000 ? `$${(price / 1000000).toFixed(1)}M` : `$${(price / 1000).toFixed(0)}k`
+      milestones.push({
+        price,
+        label,
+        reached: btcPrice >= price
+      })
+    }
+    return milestones
+  }
+
   return (
     <section id="tracker" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -139,26 +153,20 @@ export default function BitcoinTracker() {
             <TrendingUp className="w-5 h-5 text-blue-400" />
             关键里程碑
           </h4>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {[
-              { label: '10k美元', reached: btcPrice >= 10000, year: '2017' },
-              { label: '50k美元', reached: btcPrice >= 50000, year: '2021' },
-              { label: '100k美元', reached: btcPrice >= 100000, year: '2024' },
-              { label: '100万美元', reached: btcPrice >= 1000000, year: '?' },
-            ].map((milestone) => (
+          <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-10 gap-2">
+            {generateMilestones().map((milestone) => (
               <div
-                key={milestone.label}
-                className={`p-4 rounded-lg transition-all duration-300 ${
+                key={milestone.price}
+                className={`p-3 rounded-lg transition-all duration-300 text-center ${
                   milestone.reached
                     ? 'bg-green-500/20 border border-green-500/50'
                     : 'bg-slate-700/30 border border-slate-600/50'
                 }`}
               >
-                <p className="text-sm text-gray-400">{milestone.label}</p>
-                <p className={`text-lg font-semibold ${milestone.reached ? 'text-green-400' : 'text-gray-400'}`}>
-                  {milestone.reached ? '✓ 已达成' : '◯ 进行中'}
+                <p className="text-xs text-gray-400">{milestone.label}</p>
+                <p className={`text-sm font-semibold ${milestone.reached ? 'text-green-400' : 'text-gray-400'}`}>
+                  {milestone.reached ? '✓' : '◯'}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">{milestone.year}</p>
               </div>
             ))}
           </div>

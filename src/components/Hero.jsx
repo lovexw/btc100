@@ -12,14 +12,6 @@ export default function Hero() {
           <br />
           这不是投机，这是信念。这不是赌博，这是耐心。
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-colors duration-200 transform hover:scale-105">
-            开始追踪
-          </button>
-          <button className="px-8 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400/10 font-semibold rounded-lg transition-colors duration-200">
-            了解更多
-          </button>
-        </div>
       </div>
     </section>
   )
