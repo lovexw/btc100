@@ -26,9 +26,9 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-900">相关资源</h4>
             <ul className="text-gray-600 text-sm space-y-2">
-              <li><a href="https://bitcoin.org" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors duration-200">Bitcoin.org</a></li>
-              <li><a href="https://www.coindesk.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors duration-200">CoinDesk</a></li>
-              <li><a href="https://www.coingecko.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors duration-200">CoinGecko</a></li>
+              <li><a href="https://www.btchao.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors duration-200">比特囤币</a></li>
+              <li><a href="https://paper.btchao.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors duration-200">比特币白皮书</a></li>
+              <li><a href="https://wiki.btchao.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors duration-200">比特币百科</a></li>
             </ul>
           </div>
         </div>
@@ -39,10 +39,10 @@ export default function Footer() {
               Made with <Heart className="w-4 h-4 text-red-500" /> for Bitcoin believers
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-200">
+              <a href="https://github.com/lovexw" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors duration-200">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-200">
+              <a href="https://x.com/btchaocom" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-orange-500 transition-colors duration-200">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>

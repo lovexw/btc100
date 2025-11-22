@@ -43,7 +43,7 @@ export default function Philosophy() {
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
             成为百万美元信徒需要的不仅是资金，更是正确的心态。
-            这些原则指引着每一位真正的长期投资者。
+            这些原则指引着每一位真正的长期投资者，愿你穿越周期，归来仍是囤少年。
           </p>
         </div>
 
